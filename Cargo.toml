@@ -1,0 +1,19 @@
+[package]
+name = "networky"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+resolver = "2"
+members = [
+    "guarded",
+    "concurrentgraph"
+]
+
+[dependencies]
+sled = "0.34.7"
+uuid = { version = "1.1.0", features = ["v4"] }
+seize = "0.2.3"
+guarded = { path = "./guarded" }
